@@ -11,11 +11,13 @@ import { NopagesfoundComponent } from './nopagesfound/nopagesfound.component';
 import { PagesModule } from './pages/pages.module';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
     
     NopagesfoundComponent,
+         
     
     
     
