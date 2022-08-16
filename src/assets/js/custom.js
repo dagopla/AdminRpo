@@ -4,7 +4,8 @@ Author: Wrappixel
 Email: niravjoshi87@gmail.com
 File: js
 */
-$(function() {
+const customInitFuction=()=>{
+    $(function() {
     "use strict";
     $(function() {
         $(".preloader").fadeOut();
@@ -155,3 +156,6 @@ $(function() {
     });
 
 });
+}
+
+customInitFuction();
