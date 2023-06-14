@@ -9,6 +9,7 @@ import { NopagesfoundComponent } from './nopagesfound/nopagesfound.component';
 
 
 import { PagesModule } from './pages/pages.module';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -25,6 +26,7 @@ import { PagesModule } from './pages/pages.module';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     PagesModule,
     AuthModule

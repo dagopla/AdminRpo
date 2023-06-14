@@ -5,6 +5,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { Grafica1Component } from './grafica1/grafica1.component';
 import { ProgressComponent } from './progress/progress.component';
 import { AcountSettingsComponent } from './acount-settings/acount-settings.component';
+import { RxjsComponent } from './rxjs/rxjs.component';
 
 
 
@@ -13,10 +14,11 @@ const routes: Routes = [
         path:'dashboard',
         component:PagesComponent,
         children:[
-          {path:'', component: DashboardComponent},
-          {path: 'progress', component:ProgressComponent },
-          {path: 'grafica1', component:Grafica1Component},
-          {path: 'acount-settings', component: AcountSettingsComponent},
+          {path:'', component: DashboardComponent , data:{titulo:'Dashboard'}},
+          {path: 'progress', component:ProgressComponent , data:{titulo:'progress'}},
+          {path: 'grafica1', component:Grafica1Component, data:{titulo:'grafica1'}},
+          {path: 'acount-settings', component: AcountSettingsComponent, data:{titulo:'Acount Settings'}},
+          {path: 'rxjs', component: RxjsComponent, data:{titulo:'Rxjs'}},
           {path: '', redirectTo:'dashboard', pathMatch:'full'},
         ]
     },
