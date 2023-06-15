@@ -6,6 +6,7 @@ import { Grafica1Component } from './grafica1/grafica1.component';
 import { ProgressComponent } from './progress/progress.component';
 import { AcountSettingsComponent } from './acount-settings/acount-settings.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
+import { canAuthActive } from '../guards/auth.guard';
 
 
 
@@ -13,6 +14,7 @@ const routes: Routes = [
     {
         path:'dashboard',
         component:PagesComponent,
+        canActivate:[canAuthActive],
         children:[
           {path:'', component: DashboardComponent , data:{titulo:'Dashboard'}},
           {path: 'progress', component:ProgressComponent , data:{titulo:'progress'}},
