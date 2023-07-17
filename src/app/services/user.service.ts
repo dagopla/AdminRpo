@@ -14,6 +14,8 @@ const baseUrl=environment.baseUrl;
 })
 export class UserService {
 
+  user!:User;
+
   constructor(private http:HttpClient,
     private router:Router
     ) { }
@@ -45,6 +47,9 @@ export class UserService {
       }
     }).pipe(
       tap(resp=>{
+        this.user=new User(resp.user);
+        console.log(this.user);
+        
         localStorage.setItem('token',resp.token);
       }),
       map(resp=>resp.ok),

@@ -1,11 +1,13 @@
 export class User{
     constructor(
-        public nombre:string,
-        public email:string,
-        public password?:string,
-        public img?:string,
-        public role?:string,
-        public google?:boolean,
-        public uid?:string
+        {name,email,password,role,google,id,image}:{
+            name:string,
+            email:string,
+            password?:string,
+            role?:string,
+            google?:boolean,
+            id:string
+            image?:string
+        }     
     ){}
 }
