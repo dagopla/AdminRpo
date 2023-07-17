@@ -43,10 +43,11 @@
                     </div>
                     <div class="row">
                         <div class="col text-danger">
-                            <p *ngIf="validField('name')">El nombre es obligatorio</p>
-                            <p *ngIf="validField('email')">El email es obligatorio</p>
-                            <p *ngIf="passwordValid()">La contrasena no coincideo</p>
-                            <p *ngIf="termsAcepted()">Aceptar los terminos es obligatorio</p>
+                            <p *ngIf="validField('name')">*El nombre es obligatorio</p>
+                            <p *ngIf="validField('email')">*El email es obligatorio</p>
+                            <p *ngIf="passwordValid()">*La contrasena no coincideo</p>
+                            <p *ngIf="termsAcepted()">*Aceptar los terminos es obligatorio</p>
+                            <p *ngIf="validField('password')">*La contraseña debe de tener min 6 caracteres</p>
                         </div>
                     </div>
                     <div class="form-group text-center m-t-20">
@@ -56,7 +57,7 @@
                     </div>
                     <div class="form-group m-b-0">
                         <div class="col-sm-12 text-center">
-                            <p>Already have an account? <a href="pages-login-2.html" class="text-info m-l-5"><b>Sign In</b></a></p>
+                            <p>Already have an account? <a routerLink="/login" class="text-info m-l-5"><b>Sign In</b></a></p>
                         </div>
                     </div>
                 </form>

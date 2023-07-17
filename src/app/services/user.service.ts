@@ -33,6 +33,7 @@ export class UserService {
     return this.http.post<any>(`${baseUrl}/auth/google`,{token})
     .pipe(
       tap(resp=>{
+        console.log('logingoole');
         localStorage.setItem('token',resp.token);
       })
     );
